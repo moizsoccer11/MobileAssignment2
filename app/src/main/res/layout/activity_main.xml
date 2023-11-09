@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id = "@+id/toolBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="LocationPinned"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/queryInput"
+        android:layout_below="@id/toolBarContainer"
+        android:layout_marginTop="70dp"
+        android:text="Search Address:"
+        android:layout_marginLeft="5dp"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/queryInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBarContainer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        ></EditText>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/queryBtn"
+        android:layout_toRightOf="@id/deleteAddressInput"
+        android:layout_below="@id/toolBarContainer"
+        android:text="Search"
+        android:layout_marginTop="50dp"
+        android:onClick="queryButtonClick"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+    <!-- Add Address to database -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/queryInput"
+        android:layout_below="@id/toolBarContainer"
+        android:layout_marginTop="120dp"
+        android:text="Add Address:"
+        android:layout_marginLeft="5dp"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/addressInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBarContainer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"></EditText>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addBtn"
+        android:layout_toRightOf="@id/deleteAddressInput"
+        android:layout_below="@id/queryInput"
+        android:text="Add"
+        android:onClick="addButtonClick"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+
+    <!-- Delete Address to database -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/queryInput"
+        android:layout_below="@id/toolBarContainer"
+        android:layout_marginTop="170dp"
+        android:text="Delete Address:"
+        android:layout_marginLeft="5dp"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/deleteAddressInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBarContainer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="150dp"></EditText>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteBtn"
+        android:layout_toRightOf="@id/deleteAddressInput"
+        android:layout_below="@id/addressInput"
+        android:text="Delete"
+        android:onClick="deleteButtonClick"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+
+
+    <TextView
+        android:id="@+id/displayLat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/displayLong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayLat"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="">
+
+    </TextView>
+
+
+</RelativeLayout>
+
+
+
+
